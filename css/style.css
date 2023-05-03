@@ -1,0 +1,177 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 62.5%;
+  min-height: 100vh;
+  min-width: 375px;
+  background: var(--pale-blue) url("../images/pattern-background-mobile.svg") top center no-repeat;
+  background-size: contain;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  height: 540px;
+  width: 330px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card__photo {
+  width: 330px;
+}
+.card__text {
+  text-align: center;
+}
+.card__title {
+  margin: 20px 0;
+  font-size: 2.2em;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+.card__description {
+  padding: 0px 30px;
+  font-size: 1.6em;
+  line-height: 1.5;
+  color: var(--desaturated-blue);
+}
+.card__price {
+  display: flex;
+  align-items: center;
+  margin: 20px 20px;
+  font-size: 1.5em;
+  background-color: var(--very-pale-blue);
+  border-radius: 15px;
+}
+.card__icon {
+  padding: 20px 20px 20px 15px;
+}
+.card__plans {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card__plan {
+  margin-bottom: 3px;
+  font-weight: bold;
+  color: var(--dark-blue);
+}
+.card__prices {
+  margin-right: 55px;
+  color: var(--desaturated-blue);
+}
+.card__change {
+  color: var(--bright-blue);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.card__change:hover {
+  color: hsl(267, 77%, 61%);
+}
+.card__btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card__btn1 {
+  padding: 10px 0;
+  width: 88%;
+  background-color: var(--bright-blue);
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px var(--bright-blue);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.card__btn1:hover {
+  background-color: hsl(267, 77%, 61%);
+}
+.card__btn2 {
+  margin-top: 10px;
+  padding: 10px 0;
+  width: 88%;
+  color: var(--desaturated-blue);
+  font-weight: 900;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.card__btn2:hover {
+  color: black;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1440px) {
+  body {
+    background: var(--pale-blue) url("../images/pattern-background-desktop.svg") top center no-repeat;
+  }
+  .card {
+    height: 680px;
+    width: 450px;
+  }
+  .card__photo {
+    width: 450px;
+  }
+  .card__title {
+    margin: 40px 0 20px 0;
+    font-size: 3em;
+  }
+  .card__description {
+    font-size: 1.8em;
+  }
+  .card__price {
+    margin: 20px 40px;
+    font-size: 1.85em;
+  }
+  .card__prices {
+    margin-right: 110px;
+  }
+  .card__change {
+    font-size: 0.8em;
+  }
+  .card__btn1 {
+    padding: 20px 0;
+    width: 82%;
+    font-size: 1.8em;
+  }
+  .card__btn2 {
+    margin-top: 20px;
+    width: 82%;
+    font-size: 1.4em;
+  }
+}/*# sourceMappingURL=style.css.map */
